@@ -4,6 +4,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { EditProfileFormComponent } from './edit-profile-form/edit-profile-form.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { TrackViewComponent } from './track-view/track-view.component';
 import { ProfileSearchComponent } from './profile-search/profile-search.component';
 import { SendMessageBoxComponent } from './send-message-box/send-message-box.component';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
@@ -14,6 +15,7 @@ import { OnlineUsersComponent } from './online-users/online-users.component';
     RegisterFormComponent,
     EditProfileFormComponent,
     ProfileViewComponent,
+		TrackViewComponent,
     ProfileSearchComponent,
     SendMessageBoxComponent,
     ChatMessageComponent,
@@ -24,6 +26,7 @@ import { OnlineUsersComponent } from './online-users/online-users.component';
     RegisterFormComponent,
     EditProfileFormComponent,
     ProfileViewComponent,
+		TrackViewComponent,
     ProfileSearchComponent,
     SendMessageBoxComponent,
     ChatMessageComponent,

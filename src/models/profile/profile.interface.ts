@@ -1,6 +1,7 @@
 import { Need } from "../need/need.interface";
 import { Service } from "../service/service.interface";
 import { Rating } from '../rating/rating.interface';
+import { Track } from '../tracks/tracks.interface';
 
 export interface Profile {
   firstName: string;
@@ -18,4 +19,5 @@ export interface Profile {
   services: Service[];     //Filtragem de conteúdo
   online: boolean;         //Filtragem de conteúdo
   responseTime: TimeRanges;   //Filtragem de conteúdo
+  tracks: Track[];
 }

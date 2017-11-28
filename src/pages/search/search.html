@@ -15,12 +15,12 @@
 
 <ion-content>
 
-<app-profile-search (selectedProfile)="openProfile($event)"></app-profile-search>
+<app-profile-search (selectedTrack)="openProfile($event)"></app-profile-search>
 
 <!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage('LoginPage')">Login</button>-->
-<ion-fab #fab bottom right *ngIf="!authenticate">
-  <button button-ion-fab ion-fab (click)="navigateToPage('LoginPage')">
-    <ion-icon name="key"></ion-icon>
+<ion-fab #fab bottom right *ngIf="authenticate">
+  <button button-ion-fab ion-fab (click)="navigateToPage('TrackPage')">
+    <ion-icon name="bicycle"></ion-icon>
   </button>
 </ion-fab>
 

@@ -5,6 +5,7 @@ import { AuthService } from '../../providers/auth/auth.service';
 import { User } from 'firebase/app';
 import { Subscription } from 'rxjs/Subscription';
 import { Need } from '../../models/need/need.interface';
+import { Track } from '../../models/tracks/tracks.interface';
 
 /**
  * Generated class for the ProfileSearchComponent component.
@@ -20,19 +21,17 @@ export class ProfileSearchComponent implements OnInit, OnDestroy {
 
   query: string;
 
-  need: Need;
-
-  profileList: Profile[]
+  trackList: Track[]
 
   private authenticatedUser$: Subscription;
   private authenticatedUser: User;
 
   userProfile: Profile;
 
-  @Output() selectedProfile: EventEmitter<Profile>;
+  @Output() selectedTrack: EventEmitter<Track>;
 
   constructor(private data: DataService, private auth: AuthService) {
-    this.selectedProfile = new EventEmitter<Profile>();
+    this.selectedTrack = new EventEmitter<Track>();
     this.authenticatedUser$ = this.auth.getAuthenticatedUser().subscribe((user: User) => {
       this.authenticatedUser = user
     })
@@ -45,27 +44,9 @@ export class ProfileSearchComponent implements OnInit, OnDestroy {
     }
   }
 
-  selectProfile(profile: Profile){
-    this.selectedProfile.emit(profile);
+  selectTrack(track: Track){
+    this.selectedTrack.emit(track);
   }
-
-  searchUser(query: string){
-    const trimmedQuery = query.trim();
-    //AQUI DEVO MELHORAR O ALGORITMO DE BUSCA
-    if(trimmedQuery === query){
-    //Salva na lista de problemas
-    this.need.description = query;
-    this.userProfile.needs.push(this.need);
-    this.saveProfile(this.userProfile);
-    //tirar o searchProfile(Função Teste)
-    this.data.searchProfile(query);
-    this.data.searchUser(query).subscribe(profiles =>{
-      console.log(profiles);
-      this.profileList = profiles;
-    })
-    this.need = {} as Need;
-  }
-}
 
 ngOnInit(): void{
   if(!this.userProfile){
@@ -73,10 +54,8 @@ ngOnInit(): void{
     this.data.getAuthenticatedUserProfile().subscribe(profile => {
       //Instancia o perfil do usuário
       this.userProfile = profile;
-      if(!this.userProfile.needs){
-        this.userProfile.needs = [] as Need[];
-      }
-      this.need = {} as Need;
+      this.trackList = profile.tracks;
+      
     });
   }
 }

@@ -45,16 +45,12 @@ export class DataService {
     }
   }
 
-  searchUser(need: string){
-    const query = this.database.list('/profiles',{
-      query: {
-        //AQUI EU FAÇO A BUSCA E ORDENO, DEVO ORDENAR DE ACORDO COM A ESCOLHA DO USUÁRIO
-        orderByChild: 'firstName',
-        equalTo: need
-      }
+  searchUserTracks(user: User){
+    const trackList = this.database.list('/profiles/${user.uid}/tracks',{
+
     })
 
-    return query;
+    return trackList;
   }
 
   getAuthenticatedUserProfile(){
