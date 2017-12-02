@@ -53,9 +53,7 @@ export class EditProfileFormComponent implements OnInit, OnDestroy {
     this.track1 = {} as Track;
     this.track2 = {} as Track;
     this.track1.trackId = 1;
-    this.track1.trackDate = new Date(2017, 7, 20);
     this.track2.trackId = 2;
-    this.track2.trackDate = new Date(2017, 9, 25);
     this.profile.tracks = {} as Track[];
     this.profile.tracks[0] = this.track1;
     this.profile.tracks[1] = this.track2;

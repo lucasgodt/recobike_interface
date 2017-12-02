@@ -24,4 +24,11 @@
   </button>
 </ion-fab>
 
+<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage('LoginPage')">Login</button>-->
+<ion-fab #fab bottom left *ngIf="authenticate">
+  <button button-ion-fab ion-fab (click)="capturaCoordenadas()">
+    <ion-icon name="compass"></ion-icon>
+  </button>
+</ion-fab>
+
 </ion-content>

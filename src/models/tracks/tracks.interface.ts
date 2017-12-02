@@ -1,5 +1,8 @@
+import { Coordenada } from '../coordenada/coordenada.interface';
+
 export interface Track {
-  coordenadas: Coordinates[];
+  coordenadas: Coordenada[];
   trackId: number;
-  trackDate: Date;
+  trackRating: number;
+  //trackDate: Date;
 }

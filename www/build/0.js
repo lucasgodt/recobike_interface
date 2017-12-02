@@ -1,15 +1,15 @@
 webpackJsonp([0],{
 
-/***/ 460:
+/***/ 467:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InboxPageModule", function() { return InboxPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPageModule", function() { return SearchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__inbox__ = __webpack_require__(479);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search__ = __webpack_require__(487);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(470);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,46 +20,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var InboxPageModule = (function () {
-    function InboxPageModule() {
+var SearchPageModule = (function () {
+    function SearchPageModule() {
     }
-    return InboxPageModule;
+    return SearchPageModule;
 }());
-InboxPageModule = __decorate([
+SearchPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__inbox__["a" /* InboxPage */],
+            __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__inbox__["a" /* InboxPage */]),
-            __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */]
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */],
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__inbox__["a" /* InboxPage */],
+            __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
         ]
     })
-], InboxPageModule);
+], SearchPageModule);
 
-//# sourceMappingURL=inbox.module.js.map
+//# sourceMappingURL=search.module.js.map
 
 /***/ }),
 
-/***/ 468:
+/***/ 470:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__ = __webpack_require__(469);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__ = __webpack_require__(470);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_profile_form_edit_profile_form_component__ = __webpack_require__(471);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__ = __webpack_require__(472);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__track_view_track_view_component__ = __webpack_require__(473);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_search_profile_search_component__ = __webpack_require__(474);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__send_message_box_send_message_box_component__ = __webpack_require__(475);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__chat_message_chat_message_component__ = __webpack_require__(476);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__online_users_online_users_component__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__ = __webpack_require__(472);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_profile_form_edit_profile_form_component__ = __webpack_require__(473);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__ = __webpack_require__(474);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__track_view_track_view_component__ = __webpack_require__(475);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_search_profile_search_component__ = __webpack_require__(476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__send_message_box_send_message_box_component__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__chat_message_chat_message_component__ = __webpack_require__(478);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__online_users_online_users_component__ = __webpack_require__(479);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,13 +112,13 @@ ComponentsModule = __decorate([
 
 /***/ }),
 
-/***/ 469:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -207,14 +207,14 @@ LoginFormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-login-form',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/login-form/login-form.component.html"*/'<form #loginForm="ngForm" novalidate>\n<ion-card>\n  <ion-card-content>\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input [(ngModel)]="account.email" type="email" name="email" #email="ngModel" required pattern="[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>\n    </ion-item>\n    <div padding *ngIf="email.invalid && email.dirty">\n      <span class="global__input-error">Email inválido</span>\n    </div>\n    <ion-item>\n      <ion-label floating>Senha</ion-label>\n      <ion-input [(ngModel)]="account.password" type="password" name="password" #password="ngModel" required pattern="(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,16}$"></ion-input>\n    </ion-item>\n    <div padding *ngIf="password.invalid && password.dirty">\n      <span class="global__input-error">Senha inválida, deve ter pelo menos 6 caracteres e uma letra maiúscula</span>\n    </div>\n  </ion-card-content>\n  <ion-row class="login-form__buttons">\n    <div>\n      <button ion-button (click)="navigateToRegisterPage(\'RegisterPage\')" color="secondary">Registre-se</button>\n      <button ion-button (click)="login()" [disabled]="loginForm.invalid">Login</button>\n      <!--<button ion-button (click)="navigateToPage(\'TabsPage\')">Login</button>-->\n    </div>\n  </ion-row>\n</ion-card>\n</form>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/login-form/login-form.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
 ], LoginFormComponent);
 
 //# sourceMappingURL=login-form.component.js.map
 
 /***/ }),
 
-/***/ 470:
+/***/ 472:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -317,13 +317,13 @@ RegisterFormComponent = __decorate([
 
 /***/ }),
 
-/***/ 471:
+/***/ 473:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditProfileFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -416,9 +416,7 @@ var EditProfileFormComponent = (function () {
             this.track1 = {};
             this.track2 = {};
             this.track1.trackId = 1;
-            this.track1.trackDate = new Date(2017, 7, 20);
             this.track2.trackId = 2;
-            this.track2.trackDate = new Date(2017, 9, 25);
             this.profile.tracks = {};
             this.profile.tracks[0] = this.track1;
             this.profile.tracks[1] = this.track2;
@@ -450,15 +448,15 @@ EditProfileFormComponent = __decorate([
 
 /***/ }),
 
-/***/ 472:
+/***/ 474:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileViewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(155);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -525,24 +523,24 @@ ProfileViewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-profile-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/'<!-- Generated template for the ProfileViewComponent component -->\n<!--<div class="profile-view__image-container">\n  <img class="profile-view__image" src="assets/img/profile-placeholder.png" alt="">\n</div>-->\n\n<div *ngIf="userProfile">\n  <ion-card>\n    <ion-card-content>\n      <ion-item>\n        <ion-label floating>Nome</ion-label>\n        <ion-input [value]="userProfile.firstName" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Email</ion-label>\n        <ion-input [value]="userProfile.email" [readonly]=""></ion-input>\n      </ion-item>\n      <!--<ion-item>\n        <ion-label floating>Serviço</ion-label>\n        <ion-input [value]="userProfile.service" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Preço</ion-label>\n        <ion-input [value]="userProfile.preco" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Horário</ion-label>\n        <ion-input [value]="userProfile.horario" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Local</ion-label>\n        <ion-input [value]="userProfile.local" [readonly]=""></ion-input>\n      </ion-item>-->\n    </ion-card-content>\n  </ion-card>\n</div>\n<button ion-button *ngIf="!authUser" (click)="openChat(userProfile)" icon="chatbubble">Chat</button>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]])
 ], ProfileViewComponent);
 
 //# sourceMappingURL=profile-view.component.js.map
 
 /***/ }),
 
-/***/ 473:
+/***/ 475:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackViewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -574,6 +572,15 @@ var TrackViewComponent = (function () {
         this.auth = auth;
         this.nav = nav;
         this.http = http;
+        this.coordenada = {
+            latitude: 0,
+            longitude: 0
+        };
+        this.latlong = [];
+        this.track = {
+            coordenadas: this.latlong,
+            trackId: 0
+        };
         this.authUser = false;
         this.existingProfile = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
         this.authenticatedUser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
@@ -595,11 +602,21 @@ var TrackViewComponent = (function () {
                 _this.authenticatedUser.emit(_this.authUser);
             });
         }
-        this.track = this.http.get('https://recobike.herokuapp.com/recommend/2');
-        this.track.map(function (res) { return res.json(); }).subscribe(function (data) { console.log('Passeio recomendado: ', data); });
+        this.request = this.http.get('https://recobike.herokuapp.com/recommend/10');
+        this.request.map(function (res) {
+            return res.json().map(function (item) {
+                //console.log('Coordenada 1:', item[0]);
+                //console.log('Coordenada 2:', item[1]);
+                _this.coordenada.latitude = item[0];
+                _this.coordenada.longitude = item[1];
+                _this.track.coordenadas.push(_this.coordenada);
+            });
+        }).subscribe(function (data) {
+            //console.log('Passeio recomendado: ', data);
+        });
+        //console.log('trajeto: ', this.track);
+        this.recommendedTrack.emit(this.track);
         this.loader.dismiss();
-    };
-    TrackViewComponent.prototype.showTrack = function (track) {
     };
     TrackViewComponent.prototype.openChat = function (profile) {
         this.navCtrl.push('MessagePage', { profile: profile });
@@ -608,35 +625,34 @@ var TrackViewComponent = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
 ], TrackViewComponent.prototype, "recommendedTrack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]) === "function" && _b || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
 ], TrackViewComponent.prototype, "authenticatedUser", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]) === "function" && _c || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
 ], TrackViewComponent.prototype, "existingProfile", void 0);
 TrackViewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-track-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/''/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/
+        selector: 'app-track-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/'\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavParams */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _j || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
 ], TrackViewComponent);
 
-var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=track-view.component.js.map
 
 /***/ }),
 
-/***/ 474:
+/***/ 476:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileSearchComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -751,7 +767,7 @@ ProfileSearchComponent = __decorate([
 
 /***/ }),
 
-/***/ 475:
+/***/ 477:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -798,7 +814,7 @@ SendMessageBoxComponent = __decorate([
 
 /***/ }),
 
-/***/ 476:
+/***/ 478:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -844,14 +860,14 @@ ChatMessageComponent = __decorate([
 
 /***/ }),
 
-/***/ 477:
+/***/ 479:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OnlineUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__ = __webpack_require__(299);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -898,21 +914,24 @@ OnlineUsersComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-online-users',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/online-users/online-users.component.html"*/'<ion-list>\n  <ion-item-divider>Usuários Online</ion-item-divider>\n  <ion-item *ngFor="let user of userList | async" (click)="openChat(user)">\n    <ion-avatar item-left>\n      <img src="{{user.avatar}}">\n    </ion-avatar>\n      <h2>{{user.firstName}}</h2>\n      <h2>{{user.description}}</h2>\n\n  </ion-item>\n</ion-list>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/online-users/online-users.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__["a" /* DataService */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__["a" /* DataService */]])
 ], OnlineUsersComponent);
 
 //# sourceMappingURL=online-users.component.js.map
 
 /***/ }),
 
-/***/ 479:
+/***/ 487:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InboxPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mocks_messages_messages__ = __webpack_require__(480);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -925,48 +944,197 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Generated class for the InboxPage page.
+ * Generated class for the SearchPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-var InboxPage = (function () {
-    function InboxPage(navCtrl, navParams) {
+var SearchPage = (function () {
+    function SearchPage(auth, navCtrl, navParams, geolocation) {
+        this.auth = auth;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.messageList = __WEBPACK_IMPORTED_MODULE_2__mocks_messages_messages__["a" /* MESSAGE_LIST */];
+        this.geolocation = geolocation;
+        this.coordenada = {
+            latitude: 0,
+            longitude: 0
+        };
+        this.latlong = [];
+        this.track = {
+            coordenadas: this.latlong,
+            trackId: 0
+        };
+        this.capturar = false;
+        this.observador = this.geolocation.watchPosition({ enableHighAccuracy: true })
+            .filter(function (p) { return p.coords !== undefined; }); //Filter Out Errors
     }
-    InboxPage.prototype.ionViewDidLoad = function () {
-        console.log(this.messageList);
+    SearchPage.prototype.if = function (capturar) {
+        var _this = this;
+        if (capturar === void 0) { capturar = true; }
+        var watch = this.geolocation.watchPosition();
+        watch.subscribe(function (data) {
+            // data can be a set of coordinates, or an error (if an error occurred).
+            // data.coords.latitude
+            // data.coords.longitude
+            _this.coordenada.latitude = data.coords.latitude;
+            _this.coordenada.longitude = data.coords.longitude;
+            _this.latlong.push(_this.coordenada);
+        });
     };
-    return InboxPage;
+    SearchPage.prototype.openProfile = function (profile) {
+        this.navCtrl.push('ProfilePage', { profile: profile });
+    };
+    SearchPage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.auth.getAuthenticatedUser().subscribe(function (auth) {
+            !auth ? _this.authenticate = false : _this.authenticate = true;
+        });
+    };
+    SearchPage.prototype.navigateToPage = function (pageName) {
+        this.navCtrl.push(pageName);
+        console.log(this.track);
+    };
+    SearchPage.prototype.capturaCoordenadas = function () {
+        //captura as coordenadas do usuário e as insere em um objeto track
+        if (this.capturar == false) {
+            this.capturar = true;
+            this.subscription = this.observador.subscribe(function (position) {
+                console.log(position.coords.longitude + ' ' + position.coords.latitude);
+                console.log('captura ativada');
+            });
+        }
+        else if (this.capturar == true) {
+            this.capturar = false;
+            this.subscription.unsubscribe();
+            console.log('captura desativada');
+        }
+    };
+    return SearchPage;
 }());
-InboxPage = __decorate([
+SearchPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-inbox',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/inbox/inbox.html"*/'<!--\n  Generated template for the InboxPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Mensagens</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n<app-online-users></app-online-users>\n\n\n\n<!--  <ion-list>\n    <ion-item *ngFor="let message of messageList">\n      <ion-avatar item-left>\n        <img [src]="message.user.avatar" alt="Avatar">\n      </ion-avatar>\n      <h2>{{message.user.firstName}}</h2>\n      <p>{{message.date}}</p>\n      <p>{{message.lastMessage}}</p>\n    </ion-item>\n  </ion-list>-->\n\n</ion-content>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/inbox/inbox.html"*/,
+        selector: 'page-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/'<!--\n  Generated template for the SearchPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>\n\n  <!--<ion-navbar>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n\n</ion-header>-->\n\n\n<ion-content>\n\n<app-profile-search (selectedTrack)="openProfile($event)"></app-profile-search>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom right *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="navigateToPage(\'TrackPage\')">\n    <ion-icon name="bicycle"></ion-icon>\n  </button>\n</ion-fab>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom left *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="capturaCoordenadas()">\n    <ion-icon name="compass"></ion-icon>\n  </button>\n</ion-fab>\n\n</ion-content>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], InboxPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
+], SearchPage);
 
-//# sourceMappingURL=inbox.js.map
+//# sourceMappingURL=search.js.map
 
 /***/ }),
 
-/***/ 480:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 488:
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MESSAGE_LIST; });
-//import { USER_LIST } from '../../mocks/profile/profile';
-//const userList = USER_LIST;
-var messageList = [];
-//userList.forEach((user) => {
-//  messageList.push({user: user,date: new Date(), lastMessage: 'Hello'});
-//})
-var MESSAGE_LIST = messageList;
-//# sourceMappingURL=messages.js.map
+
+var Observable_1 = __webpack_require__(7);
+var filter_1 = __webpack_require__(489);
+Observable_1.Observable.prototype.filter = filter_1.filter;
+//# sourceMappingURL=filter.js.map
+
+/***/ }),
+
+/***/ 489:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Subscriber_1 = __webpack_require__(24);
+/* tslint:enable:max-line-length */
+/**
+ * Filter items emitted by the source Observable by only emitting those that
+ * satisfy a specified predicate.
+ *
+ * <span class="informal">Like
+ * [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter),
+ * it only emits a value from the source if it passes a criterion function.</span>
+ *
+ * <img src="./img/filter.png" width="100%">
+ *
+ * Similar to the well-known `Array.prototype.filter` method, this operator
+ * takes values from the source Observable, passes them through a `predicate`
+ * function and only emits those values that yielded `true`.
+ *
+ * @example <caption>Emit only click events whose target was a DIV element</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var clicksOnDivs = clicks.filter(ev => ev.target.tagName === 'DIV');
+ * clicksOnDivs.subscribe(x => console.log(x));
+ *
+ * @see {@link distinct}
+ * @see {@link distinctUntilChanged}
+ * @see {@link distinctUntilKeyChanged}
+ * @see {@link ignoreElements}
+ * @see {@link partition}
+ * @see {@link skip}
+ *
+ * @param {function(value: T, index: number): boolean} predicate A function that
+ * evaluates each value emitted by the source Observable. If it returns `true`,
+ * the value is emitted, if `false` the value is not passed to the output
+ * Observable. The `index` parameter is the number `i` for the i-th source
+ * emission that has happened since the subscription, starting from the number
+ * `0`.
+ * @param {any} [thisArg] An optional argument to determine the value of `this`
+ * in the `predicate` function.
+ * @return {Observable} An Observable of values from the source that were
+ * allowed by the `predicate` function.
+ * @method filter
+ * @owner Observable
+ */
+function filter(predicate, thisArg) {
+    return this.lift(new FilterOperator(predicate, thisArg));
+}
+exports.filter = filter;
+var FilterOperator = (function () {
+    function FilterOperator(predicate, thisArg) {
+        this.predicate = predicate;
+        this.thisArg = thisArg;
+    }
+    FilterOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new FilterSubscriber(subscriber, this.predicate, this.thisArg));
+    };
+    return FilterOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var FilterSubscriber = (function (_super) {
+    __extends(FilterSubscriber, _super);
+    function FilterSubscriber(destination, predicate, thisArg) {
+        _super.call(this, destination);
+        this.predicate = predicate;
+        this.thisArg = thisArg;
+        this.count = 0;
+        this.predicate = predicate;
+    }
+    // the try catch block below is left specifically for
+    // optimization and perf reasons. a tryCatcher is not necessary here.
+    FilterSubscriber.prototype._next = function (value) {
+        var result;
+        try {
+            result = this.predicate.call(this.thisArg, value, this.count++);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        if (result) {
+            this.destination.next(value);
+        }
+    };
+    return FilterSubscriber;
+}(Subscriber_1.Subscriber));
+//# sourceMappingURL=filter.js.map
 
 /***/ })
 

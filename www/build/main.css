@@ -51883,3 +51883,7 @@ page-tabs .tab-button[aria-selected=true] ion-icon {
   color: #fcd736 !important;
   font-size: 30px !important;
 }
+
+page-track #map_canvas {
+  height: 100%;
+}

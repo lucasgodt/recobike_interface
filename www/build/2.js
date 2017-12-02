@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 465:
+/***/ 469:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchPageModule", function() { return SearchPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search__ = __webpack_require__(485);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__track__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(470);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,46 +20,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SearchPageModule = (function () {
-    function SearchPageModule() {
+var ProfilePageModule = (function () {
+    function ProfilePageModule() {
     }
-    return SearchPageModule;
+    return ProfilePageModule;
 }());
-SearchPageModule = __decorate([
+ProfilePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
+            __WEBPACK_IMPORTED_MODULE_2__track__["a" /* TrackPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__track__["a" /* TrackPage */]),
             __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* ComponentsModule */],
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__search__["a" /* SearchPage */],
+            __WEBPACK_IMPORTED_MODULE_2__track__["a" /* TrackPage */],
         ]
     })
-], SearchPageModule);
+], ProfilePageModule);
 
-//# sourceMappingURL=search.module.js.map
+//# sourceMappingURL=track.module.js.map
 
 /***/ }),
 
-/***/ 468:
+/***/ 470:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__ = __webpack_require__(469);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__ = __webpack_require__(470);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_profile_form_edit_profile_form_component__ = __webpack_require__(471);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__ = __webpack_require__(472);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__track_view_track_view_component__ = __webpack_require__(473);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_search_profile_search_component__ = __webpack_require__(474);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__send_message_box_send_message_box_component__ = __webpack_require__(475);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__chat_message_chat_message_component__ = __webpack_require__(476);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__online_users_online_users_component__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_form_login_form_component__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_form_register_form_component__ = __webpack_require__(472);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_profile_form_edit_profile_form_component__ = __webpack_require__(473);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_view_profile_view_component__ = __webpack_require__(474);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__track_view_track_view_component__ = __webpack_require__(475);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__profile_search_profile_search_component__ = __webpack_require__(476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__send_message_box_send_message_box_component__ = __webpack_require__(477);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__chat_message_chat_message_component__ = __webpack_require__(478);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__online_users_online_users_component__ = __webpack_require__(479);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,13 +112,13 @@ ComponentsModule = __decorate([
 
 /***/ }),
 
-/***/ 469:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -207,14 +207,14 @@ LoginFormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-login-form',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/login-form/login-form.component.html"*/'<form #loginForm="ngForm" novalidate>\n<ion-card>\n  <ion-card-content>\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input [(ngModel)]="account.email" type="email" name="email" #email="ngModel" required pattern="[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"></ion-input>\n    </ion-item>\n    <div padding *ngIf="email.invalid && email.dirty">\n      <span class="global__input-error">Email inválido</span>\n    </div>\n    <ion-item>\n      <ion-label floating>Senha</ion-label>\n      <ion-input [(ngModel)]="account.password" type="password" name="password" #password="ngModel" required pattern="(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,16}$"></ion-input>\n    </ion-item>\n    <div padding *ngIf="password.invalid && password.dirty">\n      <span class="global__input-error">Senha inválida, deve ter pelo menos 6 caracteres e uma letra maiúscula</span>\n    </div>\n  </ion-card-content>\n  <ion-row class="login-form__buttons">\n    <div>\n      <button ion-button (click)="navigateToRegisterPage(\'RegisterPage\')" color="secondary">Registre-se</button>\n      <button ion-button (click)="login()" [disabled]="loginForm.invalid">Login</button>\n      <!--<button ion-button (click)="navigateToPage(\'TabsPage\')">Login</button>-->\n    </div>\n  </ion-row>\n</ion-card>\n</form>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/login-form/login-form.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
 ], LoginFormComponent);
 
 //# sourceMappingURL=login-form.component.js.map
 
 /***/ }),
 
-/***/ 470:
+/***/ 472:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -317,13 +317,13 @@ RegisterFormComponent = __decorate([
 
 /***/ }),
 
-/***/ 471:
+/***/ 473:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditProfileFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -416,9 +416,7 @@ var EditProfileFormComponent = (function () {
             this.track1 = {};
             this.track2 = {};
             this.track1.trackId = 1;
-            this.track1.trackDate = new Date(2017, 7, 20);
             this.track2.trackId = 2;
-            this.track2.trackDate = new Date(2017, 9, 25);
             this.profile.tracks = {};
             this.profile.tracks[0] = this.track1;
             this.profile.tracks[1] = this.track2;
@@ -450,15 +448,15 @@ EditProfileFormComponent = __decorate([
 
 /***/ }),
 
-/***/ 472:
+/***/ 474:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileViewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(155);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -525,24 +523,24 @@ ProfileViewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-profile-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/'<!-- Generated template for the ProfileViewComponent component -->\n<!--<div class="profile-view__image-container">\n  <img class="profile-view__image" src="assets/img/profile-placeholder.png" alt="">\n</div>-->\n\n<div *ngIf="userProfile">\n  <ion-card>\n    <ion-card-content>\n      <ion-item>\n        <ion-label floating>Nome</ion-label>\n        <ion-input [value]="userProfile.firstName" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Email</ion-label>\n        <ion-input [value]="userProfile.email" [readonly]=""></ion-input>\n      </ion-item>\n      <!--<ion-item>\n        <ion-label floating>Serviço</ion-label>\n        <ion-input [value]="userProfile.service" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Preço</ion-label>\n        <ion-input [value]="userProfile.preco" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Horário</ion-label>\n        <ion-input [value]="userProfile.horario" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Local</ion-label>\n        <ion-input [value]="userProfile.local" [readonly]=""></ion-input>\n      </ion-item>-->\n    </ion-card-content>\n  </ion-card>\n</div>\n<button ion-button *ngIf="!authUser" (click)="openChat(userProfile)" icon="chatbubble">Chat</button>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]])
 ], ProfileViewComponent);
 
 //# sourceMappingURL=profile-view.component.js.map
 
 /***/ }),
 
-/***/ 473:
+/***/ 475:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackViewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -574,6 +572,15 @@ var TrackViewComponent = (function () {
         this.auth = auth;
         this.nav = nav;
         this.http = http;
+        this.coordenada = {
+            latitude: 0,
+            longitude: 0
+        };
+        this.latlong = [];
+        this.track = {
+            coordenadas: this.latlong,
+            trackId: 0
+        };
         this.authUser = false;
         this.existingProfile = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
         this.authenticatedUser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
@@ -595,11 +602,21 @@ var TrackViewComponent = (function () {
                 _this.authenticatedUser.emit(_this.authUser);
             });
         }
-        this.track = this.http.get('https://recobike.herokuapp.com/recommend/2');
-        this.track.map(function (res) { return res.json(); }).subscribe(function (data) { console.log('Passeio recomendado: ', data); });
+        this.request = this.http.get('https://recobike.herokuapp.com/recommend/10');
+        this.request.map(function (res) {
+            return res.json().map(function (item) {
+                //console.log('Coordenada 1:', item[0]);
+                //console.log('Coordenada 2:', item[1]);
+                _this.coordenada.latitude = item[0];
+                _this.coordenada.longitude = item[1];
+                _this.track.coordenadas.push(_this.coordenada);
+            });
+        }).subscribe(function (data) {
+            //console.log('Passeio recomendado: ', data);
+        });
+        //console.log('trajeto: ', this.track);
+        this.recommendedTrack.emit(this.track);
         this.loader.dismiss();
-    };
-    TrackViewComponent.prototype.showTrack = function (track) {
     };
     TrackViewComponent.prototype.openChat = function (profile) {
         this.navCtrl.push('MessagePage', { profile: profile });
@@ -608,35 +625,34 @@ var TrackViewComponent = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
 ], TrackViewComponent.prototype, "recommendedTrack", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]) === "function" && _b || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
 ], TrackViewComponent.prototype, "authenticatedUser", void 0);
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]) === "function" && _c || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
 ], TrackViewComponent.prototype, "existingProfile", void 0);
 TrackViewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-track-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/''/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/
+        selector: 'app-track-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/'\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["g" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavParams */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _j || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
 ], TrackViewComponent);
 
-var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=track-view.component.js.map
 
 /***/ }),
 
-/***/ 474:
+/***/ 476:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileSearchComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -751,7 +767,7 @@ ProfileSearchComponent = __decorate([
 
 /***/ }),
 
-/***/ 475:
+/***/ 477:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -798,7 +814,7 @@ SendMessageBoxComponent = __decorate([
 
 /***/ }),
 
-/***/ 476:
+/***/ 478:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -844,14 +860,14 @@ ChatMessageComponent = __decorate([
 
 /***/ }),
 
-/***/ 477:
+/***/ 479:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OnlineUsersComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__ = __webpack_require__(299);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -898,21 +914,22 @@ OnlineUsersComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-online-users',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/online-users/online-users.component.html"*/'<ion-list>\n  <ion-item-divider>Usuários Online</ion-item-divider>\n  <ion-item *ngFor="let user of userList | async" (click)="openChat(user)">\n    <ion-avatar item-left>\n      <img src="{{user.avatar}}">\n    </ion-avatar>\n      <h2>{{user.firstName}}</h2>\n      <h2>{{user.description}}</h2>\n\n  </ion-item>\n</ion-list>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/online-users/online-users.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__["a" /* DataService */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_data_data_service__["a" /* DataService */]])
 ], OnlineUsersComponent);
 
 //# sourceMappingURL=online-users.component.js.map
 
 /***/ }),
 
-/***/ 485:
+/***/ 491:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__ = __webpack_require__(303);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -925,41 +942,114 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
- * Generated class for the SearchPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-var SearchPage = (function () {
-    function SearchPage(auth, navCtrl, navParams) {
+
+var TrackPage = (function () {
+    function TrackPage(auth, navCtrl, navParams, menuController) {
         this.auth = auth;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.menuController = menuController;
+        this.mapReady = false;
+        this.track = {};
+        // https://forum.ionicframework.com/t/google-maps-making-sidemenu-unusable/69237/22
+        /*let leftMenu = menuController.get(); //  menuController.get('left');
+    
+        if (leftMenu) {
+          leftMenu.ionOpen.subscribe(() => {
+            console.log('Menu opened');
+            if (this.map) {
+              this.map.setClickable(false);
+            }
+          });
+    
+          leftMenu.ionClose.subscribe(() => {
+            console.log('Menu closed');
+            if (this.map) {
+              this.map.setClickable(true);
+            }
+          });
+        }*/
     }
-    SearchPage.prototype.openProfile = function (profile) {
-        this.navCtrl.push('ProfilePage', { profile: profile });
+    TrackPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.loadMap();
+        }, 1000);
     };
-    SearchPage.prototype.ngOnInit = function () {
+    TrackPage.prototype.loadMap = function () {
+        var _this = this;
+        var mapOptions = {
+            camera: {
+                target: {
+                    lat: 43.0741904,
+                    lng: -89.3809802
+                },
+                zoom: 18,
+                tilt: 30
+            }
+        };
+        // Create a map after the view is loaded.
+        // (platform is already ready in app.component.ts)
+        this.map = __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__["a" /* GoogleMaps */].create('map_canvas', mapOptions);
+        this.map.setVisible(true);
+        // Wait the maps plugin is ready until the MAP_READY event
+        this.map.one(__WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__["c" /* GoogleMapsEvent */].MAP_READY).then(function () {
+            _this.mapReady = true;
+            console.log('map is ready to use.');
+        });
+    };
+    TrackPage.prototype.onButtonClick = function () {
+        var _this = this;
+        if (!this.mapReady) {
+            console.log("Map not ready");
+            return;
+        }
+        this.map.clear();
+        // Get the location of you
+        this.map.getMyLocation()
+            .then(function (location) {
+            console.log(JSON.stringify(location, null, 2));
+            // Move the map camera to the location with animation
+            return _this.map.animateCamera({
+                target: location.latLng,
+                zoom: 17,
+                tilt: 30
+            }).then(function () {
+                // add a marker
+                return _this.map.addMarker({
+                    title: '@ionic-native/google-maps plugin!',
+                    snippet: 'This plugin is awesome!',
+                    position: location.latLng,
+                    animation: __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_maps__["b" /* GoogleMapsAnimation */].BOUNCE
+                });
+            });
+        }).then(function (marker) {
+            // show the infoWindow
+            marker.showInfoWindow();
+        });
+    };
+    TrackPage.prototype.ngOnInit = function () {
         var _this = this;
         this.auth.getAuthenticatedUser().subscribe(function (auth) {
             !auth ? _this.authenticate = false : _this.authenticate = true;
         });
     };
-    SearchPage.prototype.navigateToPage = function (pageName) {
-        this.navCtrl.push(pageName);
+    TrackPage.prototype.showTrack = function (track) {
+        this.track = track;
+        console.log('Funciona pelo amor de deus: ', this.track);
+        //Agora é só printar o mapa demarcado na rela
     };
-    return SearchPage;
+    return TrackPage;
 }());
-SearchPage = __decorate([
+TrackPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/'<!--\n  Generated template for the SearchPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>\n\n  <!--<ion-navbar>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n\n</ion-header>-->\n\n\n<ion-content>\n\n<app-profile-search (selectedTrack)="openProfile($event)"></app-profile-search>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom right *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="navigateToPage(\'TrackPage\')">\n    <ion-icon name="bicycle"></ion-icon>\n  </button>\n</ion-fab>\n\n</ion-content>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/,
+        selector: 'page-track',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/track/track.html"*/'<!--<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Recomendação</ion-title>\n  </ion-navbar>\n</ion-header>-->\n<div id="map_canvas" ng-style="meuEstilo">\n  <!--<button ion-button (click)="onButtonClick($event)">Demo</button>-->\n</div>\n\n<!--<ion-content padding>\n\n  <app-track-view (recommendedTrack)="showTrack($event)" ></app-track-view>\n\n</ion-content>-->\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/track/track.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], SearchPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]])
+], TrackPage);
 
-//# sourceMappingURL=search.js.map
+//# sourceMappingURL=track.js.map
 
 /***/ })
 

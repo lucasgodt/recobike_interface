@@ -6,6 +6,7 @@ import { Http } from '@angular/http';
 import { User } from "firebase/app";
 import { Profile } from "../../models/profile/profile.interface";
 import { Track } from "../../models/tracks/tracks.interface";
+import { Coordenada } from "../../models/coordenada/coordenada.interface";
 import { LoadingController, Loading } from "ionic-angular";
 import { NavParams, NavController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
@@ -23,7 +24,21 @@ import 'rxjs/add/operator/map';
 export class TrackViewComponent implements OnInit {
 
   public userProfile: Profile;
-  track: Observable<any>;
+  request: Observable<any>;
+
+  coordenada: Coordenada = {
+    latitude : 0,
+    longitude : 0
+  };
+
+  latlong: Coordenada[] = [];
+
+  track: Track = {
+    coordenadas: this.latlong,
+    trackId: 0,
+    trackRating: 0
+  };
+
   public authUser: boolean = false;
   private loader: Loading;
 
@@ -59,17 +74,22 @@ export class TrackViewComponent implements OnInit {
     })
     }
 
-    this.track = this.http.get('https://recobike.herokuapp.com/recommend/2');
-    this.track.map(res => res.json()).subscribe(data => { console.log('Passeio recomendado: ', data); })
-
+    this.request = this.http.get('https://recobike.herokuapp.com/recommend/10');
+    this.request.map(res => {
+      return res.json().map((item)=> {
+        //console.log('Coordenada 1:', item[0]);
+        //console.log('Coordenada 2:', item[1]);
+        this.coordenada.latitude = item[0];
+        this.coordenada.longitude = item[1];
+        this.track.coordenadas.push(this.coordenada)
+        })
+      }).subscribe(data => {
+      //console.log('Passeio recomendado: ', data);
+   })
+    //console.log('trajeto: ', this.track);
+    this.recommendedTrack.emit(this.track);
     this.loader.dismiss();
   }
-
-  showTrack(track: Track){
-
-  }
-
-
 
   openChat(profile: Profile){
     this.navCtrl.push('MessagePage',{ profile });
