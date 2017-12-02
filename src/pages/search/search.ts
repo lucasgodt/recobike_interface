@@ -6,6 +6,7 @@ import { Track } from "../../models/tracks/tracks.interface";
 import { Coordenada } from "../../models/coordenada/coordenada.interface";
 import { Geolocation,Geoposition } from '@ionic-native/geolocation';
 import { Observable } from 'rxjs/Observable';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/filter';
 
 /**
@@ -38,27 +39,29 @@ export class SearchPage implements OnInit {
   track: Track = {
     coordenadas: this.latlong,
     trackId: 0,
-    trackRating: 0
+    trackRating: 0,
+    userId: 0
   };
 
-  constructor(private auth: AuthService, private navCtrl: NavController, private navParams: NavParams, private geolocation: Geolocation) {
+  constructor(public http: Http, private auth: AuthService, private navCtrl: NavController, private navParams: NavParams, private geolocation: Geolocation) {
     this.capturar = false;
     this.observador = this.geolocation.watchPosition(/*{enableHighAccuracy : true}*/)
-                            .filter((p) => p.coords !== undefined) //Filter Out Errors
+                            .filter((p) => p.coords !== undefined) //Filtra erros
+    //capturar o id do usuário e o utilizar
   }
 
-  if(capturar=true){
-
-    let watch = this.geolocation.watchPosition();
-    watch.subscribe((data) => {
-      // data can be a set of coordinates, or an error (if an error occurred).
-      // data.coords.latitude
-      // data.coords.longitude
-      this.coordenada.latitude=data.coords.latitude;
-      this.coordenada.longitude=data.coords.longitude;
-      this.latlong.push(this.coordenada);
-    });
-
+  postRequestTrack() {
+    var headers = new Headers();
+    headers.append("Accept", 'application/json');
+    headers.append('Content-Type', 'application/json' );
+    let options = new RequestOptions({ headers: headers });
+    //http://127.0.0.1:5002/novatrack
+    this.http.post("https://recobike.herokuapp.com/novatrack", this.track, options)
+      .subscribe(data => {
+        console.log(data);
+       }, error => {
+        console.log(error);// Error getting the data
+      });
   }
 
   openProfile(profile: Profile){
@@ -93,7 +96,9 @@ export class SearchPage implements OnInit {
       console.log('captura desativada');
       //Popar uma tela de avaliação de trajeto
       //this.track.trackRating = X
+
       //Jsonify e depois mandar o objeto trajeto para o sistema de recomendacao
+      this.postRequestTrack();
 
     }
   }

@@ -4,5 +4,6 @@ export interface Track {
   coordenadas: Coordenada[];
   trackId: number;
   trackRating: number;
+  userId: number;
   //trackDate: Date;
 }

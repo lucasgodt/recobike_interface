@@ -36,7 +36,8 @@ export class TrackViewComponent implements OnInit {
   track: Track = {
     coordenadas: this.latlong,
     trackId: 0,
-    trackRating: 0
+    trackRating: 0,
+    userId: 0
   };
 
   public authUser: boolean = false;

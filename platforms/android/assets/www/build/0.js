@@ -579,7 +579,8 @@ var TrackViewComponent = (function () {
         this.latlong = [];
         this.track = {
             coordenadas: this.latlong,
-            trackId: 0
+            trackId: 0,
+            trackRating: 0
         };
         this.authUser = false;
         this.existingProfile = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
@@ -639,7 +640,7 @@ TrackViewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app-track-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/'\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/track-view/track-view.component.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]])
 ], TrackViewComponent);
 
 //# sourceMappingURL=track-view.component.js.map
@@ -930,8 +931,9 @@ OnlineUsersComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__ = __webpack_require__(488);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -946,6 +948,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the SearchPage page.
  *
@@ -953,7 +956,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var SearchPage = (function () {
-    function SearchPage(auth, navCtrl, navParams, geolocation) {
+    function SearchPage(http, auth, navCtrl, navParams, geolocation) {
+        this.http = http;
         this.auth = auth;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -965,23 +969,23 @@ var SearchPage = (function () {
         this.latlong = [];
         this.track = {
             coordenadas: this.latlong,
-            trackId: 0
+            trackId: 0,
+            trackRating: 0
         };
         this.capturar = false;
-        this.observador = this.geolocation.watchPosition({ enableHighAccuracy: true })
-            .filter(function (p) { return p.coords !== undefined; }); //Filter Out Errors
+        this.observador = this.geolocation.watchPosition()
+            .filter(function (p) { return p.coords !== undefined; }); //Filtra erros
     }
-    SearchPage.prototype.if = function (capturar) {
-        var _this = this;
-        if (capturar === void 0) { capturar = true; }
-        var watch = this.geolocation.watchPosition();
-        watch.subscribe(function (data) {
-            // data can be a set of coordinates, or an error (if an error occurred).
-            // data.coords.latitude
-            // data.coords.longitude
-            _this.coordenada.latitude = data.coords.latitude;
-            _this.coordenada.longitude = data.coords.longitude;
-            _this.latlong.push(_this.coordenada);
+    SearchPage.prototype.postRequestTrack = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]();
+        headers.append("Accept", 'application/json');
+        headers.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        this.http.post("http://192.168.0.106:5002/novatrack", this.track, options)
+            .subscribe(function (data) {
+            console.log(data);
+        }, function (error) {
+            console.log(error); // Error getting the data
         });
     };
     SearchPage.prototype.openProfile = function (profile) {
@@ -998,18 +1002,26 @@ var SearchPage = (function () {
         console.log(this.track);
     };
     SearchPage.prototype.capturaCoordenadas = function () {
+        var _this = this;
         //captura as coordenadas do usuário e as insere em um objeto track
         if (this.capturar == false) {
             this.capturar = true;
             this.subscription = this.observador.subscribe(function (position) {
-                console.log(position.coords.longitude + ' ' + position.coords.latitude);
                 console.log('captura ativada');
+                _this.coordenada.latitude = position.coords.latitude;
+                _this.coordenada.longitude = position.coords.longitude;
+                _this.latlong.push(_this.coordenada);
+                console.log(_this.track);
             });
         }
         else if (this.capturar == true) {
             this.capturar = false;
             this.subscription.unsubscribe();
             console.log('captura desativada');
+            //Popar uma tela de avaliação de trajeto
+            //this.track.trackRating = X
+            //Jsonify e depois mandar o objeto trajeto para o sistema de recomendacao
+            this.postRequestTrack();
         }
     };
     return SearchPage;
@@ -1019,7 +1031,7 @@ SearchPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/'<!--\n  Generated template for the SearchPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>\n\n  <!--<ion-navbar>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n\n</ion-header>-->\n\n\n<ion-content>\n\n<app-profile-search (selectedTrack)="openProfile($event)"></app-profile-search>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom right *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="navigateToPage(\'TrackPage\')">\n    <ion-icon name="bicycle"></ion-icon>\n  </button>\n</ion-fab>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom left *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="capturaCoordenadas()">\n    <ion-icon name="compass"></ion-icon>\n  </button>\n</ion-fab>\n\n</ion-content>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
 ], SearchPage);
 
 //# sourceMappingURL=search.js.map
