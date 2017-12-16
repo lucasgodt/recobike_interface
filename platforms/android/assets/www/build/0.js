@@ -408,18 +408,17 @@ var EditProfileFormComponent = (function () {
     EditProfileFormComponent.prototype.createService = function () {
     };
     EditProfileFormComponent.prototype.ngOnInit = function () {
+        var a = Math.random() * 100000;
+        var b = Math.round(a);
         if (!this.profile) {
             this.profile = {};
+            this.profile.androidId = b;
+        }
+        else if (!this.profile.androidId) {
+            this.profile.androidId = b;
         }
         //hardcoded tracks para teste
         if (!this.profile.tracks) {
-            this.track1 = {};
-            this.track2 = {};
-            this.track1.trackId = 1;
-            this.track2.trackId = 2;
-            this.profile.tracks = {};
-            this.profile.tracks[0] = this.track1;
-            this.profile.tracks[1] = this.track2;
             //this.profile.tracks[1].trackId = 1;
             //this.profile.tracks[1].trackDate = new Date(2017, 9, 21);
         }
@@ -439,7 +438,7 @@ __decorate([
 ], EditProfileFormComponent.prototype, "profile", void 0);
 EditProfileFormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-edit-profile-form',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/edit-profile-form/edit-profile-form.component.html"*/'<ion-card>\n  <ion-card-content>\n    <!--<ion-item>\n      <ion-label floating>Escolha sua foto</ion-label>\n      <ion-input [(ngModel)]="profile.avatar" type="text"></ion-input>\n    </ion-item>-->\n    <ion-item>\n      <ion-label floating>Nome</ion-label>\n      <ion-input [(ngModel)]="profile.firstName" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input [(ngModel)]="profile.email" type="email"></ion-input>\n    </ion-item>\n    <!--<ion-item>\n      <ion-label floating>Serviço</ion-label>\n      <ion-input [(ngModel)]="profile.service" type="text"></ion-input>\n    </ion-item>-->\n    <ion-item>\n      <ion-label floating>Um pouco sobre mim</ion-label>\n      <ion-input [(ngModel)]="profile.description" type="text"></ion-input>\n    </ion-item>\n    <!--<ion-item>\n      <ion-label floating>Preço Médio</ion-label>\n      <ion-input  [(ngModel)]="profile.preco" type="number"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Horário</ion-label>\n      <ion-input  [(ngModel)]="profile.horario" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Local</ion-label>\n      <ion-input [(ngModel)]="profile.local" type="text"></ion-input>\n    </ion-item>-->\n  </ion-card-content>\n</ion-card>\n<button ion-button (click)="createService()">Adicionar serviço</button>\n<button ion-button (click)="saveProfile()">Salvar</button>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/edit-profile-form/edit-profile-form.component.html"*/
+        selector: 'app-edit-profile-form',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/edit-profile-form/edit-profile-form.component.html"*/'<ion-card>\n  <ion-card-content>\n    <!--<ion-item>\n      <ion-label floating>Escolha sua foto</ion-label>\n      <ion-input [(ngModel)]="profile.avatar" type="text"></ion-input>\n    </ion-item>-->\n    <ion-item>\n      <ion-label floating>Nome</ion-label>\n      <ion-input [(ngModel)]="profile.firstName" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input [(ngModel)]="profile.email" type="email"></ion-input>\n    </ion-item>\n    <!--<ion-item>\n      <ion-label floating>Serviço</ion-label>\n      <ion-input [(ngModel)]="profile.service" type="text"></ion-input>\n    </ion-item>-->\n    <ion-item>\n      <ion-label floating>Um pouco sobre mim</ion-label>\n      <ion-input [(ngModel)]="profile.description" type="text"></ion-input>\n    </ion-item>\n    <!--<ion-item>\n      <ion-label floating>Id do android</ion-label>\n      <ion-input  [(ngModel)]="profile.androidId" type="number"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Horário</ion-label>\n      <ion-input  [(ngModel)]="profile.horario" type="text"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Local</ion-label>\n      <ion-input [(ngModel)]="profile.local" type="text"></ion-input>\n    </ion-item>-->\n  </ion-card-content>\n</ion-card>\n<button ion-button (click)="createService()">Adicionar serviço</button>\n<button ion-button (click)="saveProfile()">Salvar</button>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/edit-profile-form/edit-profile-form.component.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */]])
 ], EditProfileFormComponent);
@@ -521,7 +520,7 @@ __decorate([
 ], ProfileViewComponent.prototype, "existingProfile", void 0);
 ProfileViewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-profile-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/'<!-- Generated template for the ProfileViewComponent component -->\n<!--<div class="profile-view__image-container">\n  <img class="profile-view__image" src="assets/img/profile-placeholder.png" alt="">\n</div>-->\n\n<div *ngIf="userProfile">\n  <ion-card>\n    <ion-card-content>\n      <ion-item>\n        <ion-label floating>Nome</ion-label>\n        <ion-input [value]="userProfile.firstName" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Email</ion-label>\n        <ion-input [value]="userProfile.email" [readonly]=""></ion-input>\n      </ion-item>\n      <!--<ion-item>\n        <ion-label floating>Serviço</ion-label>\n        <ion-input [value]="userProfile.service" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Preço</ion-label>\n        <ion-input [value]="userProfile.preco" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Horário</ion-label>\n        <ion-input [value]="userProfile.horario" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Local</ion-label>\n        <ion-input [value]="userProfile.local" [readonly]=""></ion-input>\n      </ion-item>-->\n    </ion-card-content>\n  </ion-card>\n</div>\n<button ion-button *ngIf="!authUser" (click)="openChat(userProfile)" icon="chatbubble">Chat</button>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/
+        selector: 'app-profile-view',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/'<!-- Generated template for the ProfileViewComponent component -->\n<!--<div class="profile-view__image-container">\n  <img class="profile-view__image" src="assets/img/profile-placeholder.png" alt="">\n</div>-->\n\n<div *ngIf="userProfile">\n  <ion-card>\n    <ion-card-content>\n      <ion-item>\n        <ion-label floating>Nome</ion-label>\n        <ion-input [value]="userProfile.firstName" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Email</ion-label>\n        <ion-input [value]="userProfile.email" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>android ID</ion-label>\n        <ion-input [value]="userProfile.androidId" [readonly]=""></ion-input>\n      </ion-item>\n      <!--<ion-item>\n        <ion-label floating>Serviço</ion-label>\n        <ion-input [value]="userProfile.service" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Preço</ion-label>\n        <ion-input [value]="userProfile.preco" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Horário</ion-label>\n        <ion-input [value]="userProfile.horario" [readonly]=""></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Local</ion-label>\n        <ion-input [value]="userProfile.local" [readonly]=""></ion-input>\n      </ion-item>-->\n    </ion-card-content>\n  </ion-card>\n</div>\n<button ion-button *ngIf="!authUser" (click)="openChat(userProfile)" icon="chatbubble">Chat</button>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-view/profile-view.component.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]])
 ], ProfileViewComponent);
@@ -579,8 +578,10 @@ var TrackViewComponent = (function () {
         this.latlong = [];
         this.track = {
             coordenadas: this.latlong,
-            trackId: 0,
-            trackRating: 0
+            $trackId: 0,
+            trackRating: 0,
+            userId: null,
+            androidId: 0
         };
         this.authUser = false;
         this.existingProfile = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
@@ -759,7 +760,7 @@ __decorate([
 ], ProfileSearchComponent.prototype, "selectedTrack", void 0);
 ProfileSearchComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app-profile-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-search/profile-search.component.html"*/'<!-- Theme Search bars Field + header -->\n<ion-grid no-padding>\n  <ion-row>\n    <ion-col col-12>\n      <div background-size class="container-hearder-image">\n        <div class="search-bar-bcg">\n          <h2 search-bar-title>Suas trajetórias</h2>\n        </div>\n      </div>\n    </ion-col>\n    <!-- List -->\n        <ion-grid no-padding>\n          <ion-row *ngIf="trackList?.length > 0">\n            <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 *ngFor="let track of trackList">\n              <ion-card card-bcg text-left class="card" (click)="selectTrack(track)"><!--(click)="onEvent(\'onItemClick\', item.title, $event)">-->\n                <!--Card-content-->\n                <ion-card-content>\n                  <ion-card-title no-padding>\n                    <h2 card-title>São Paulo</h2>\n                    <h2 card-title>Trajeto {{track.trackId}}</h2>\n                  </ion-card-title>\n                  <!--<h3 card-subtitle>{{profile.service}}</h3>-->\n                  <h3 card-subtitle>20/07/2017</h3>\n                  <!--<p card-body-text>{{profile.description}}</p>-->\n                  <!---Social share-->\n                  <div right class="social">\n                    <ion-icon>\n                      <i icon-small class="icon-thumb-up"></i>\n                    </ion-icon>\n                    <ion-icon>\n                      <i icon-small class="icon-heart"></i>\n                    </ion-icon>\n                    <ion-icon>\n                      <i icon-small class="icon-share-variant"></i>\n                    </ion-icon>\n                  </div>\n\n                </ion-card-content>\n              </ion-card>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n\n      <!-- Fab Button\n      <ion-fab #fab bottom right>\n        <button button-ion-fab ion-fab (click)="onEvent(\'onFab\', data, $event)">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-fab>-->\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-search/profile-search.component.html"*/
+        selector: 'app-profile-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-search/profile-search.component.html"*/'<!-- Theme Search bars Field + header -->\n<ion-grid no-padding>\n  <ion-row>\n    <ion-col col-12>\n      <div background-size class="container-hearder-image">\n        <div class="search-bar-bcg">\n          <h2 search-bar-title>Suas trajetórias</h2>\n        </div>\n      </div>\n    </ion-col>\n    <!-- List -->\n        <ion-grid no-padding>\n          <ion-row *ngIf="trackList?.length > 0">\n            <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 *ngFor="let track of trackList">\n              <ion-card card-bcg text-left class="card" (click)="selectTrack(track)"><!--(click)="onEvent(\'onItemClick\', item.title, $event)">-->\n                <!--Card-content-->\n                <ion-card-content>\n                  <ion-card-title no-padding>\n                    <h2 card-title>São Paulo</h2>\n                    <h2 card-title>Trajeto {{track.$trackId}}</h2>\n                  </ion-card-title>\n                  <!--<h3 card-subtitle>{{profile.service}}</h3>-->\n                  <h3 card-subtitle>20/07/2017</h3>\n                  <!--<p card-body-text>{{profile.description}}</p>-->\n                  <!---Social share-->\n                  <div right class="social">\n                    <ion-icon>\n                      <i icon-small class="icon-thumb-up"></i>\n                    </ion-icon>\n                    <ion-icon>\n                      <i icon-small class="icon-heart"></i>\n                    </ion-icon>\n                    <ion-icon>\n                      <i icon-small class="icon-share-variant"></i>\n                    </ion-icon>\n                  </div>\n\n                </ion-card-content>\n              </ion-card>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n\n      <!-- Fab Button\n      <ion-fab #fab bottom right>\n        <button button-ion-fab ion-fab (click)="onEvent(\'onFab\', data, $event)">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-fab>-->\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/components/profile-search/profile-search.component.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */]])
 ], ProfileSearchComponent);
@@ -930,10 +931,11 @@ OnlineUsersComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(300);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__ = __webpack_require__(488);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_data_data_service__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -949,6 +951,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the SearchPage page.
  *
@@ -956,12 +959,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var SearchPage = (function () {
-    function SearchPage(http, auth, navCtrl, navParams, geolocation) {
+    function SearchPage(http, data, auth, navCtrl, navParams, geolocation, toast) {
         this.http = http;
+        this.data = data;
         this.auth = auth;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.geolocation = geolocation;
+        this.toast = toast;
         this.coordenada = {
             latitude: 0,
             longitude: 0
@@ -969,21 +974,31 @@ var SearchPage = (function () {
         this.latlong = [];
         this.track = {
             coordenadas: this.latlong,
-            trackId: 0,
-            trackRating: 0
+            $trackId: 0,
+            trackRating: 0,
+            userId: null,
+            androidId: 0
         };
         this.capturar = false;
         this.observador = this.geolocation.watchPosition()
             .filter(function (p) { return p.coords !== undefined; }); //Filtra erros
+        //capturar o id do usuário e o utilizar
     }
     SearchPage.prototype.postRequestTrack = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]();
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Headers */]();
         headers.append("Accept", 'application/json');
         headers.append('Content-Type', 'application/json');
-        var options = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        this.http.post("http://192.168.0.106:5002/novatrack", this.track, options)
+        var options = new __WEBPACK_IMPORTED_MODULE_5__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        //http://127.0.0.1:5002/novatrack
+        //https://recobike.herokuapp.com/novatrack
+        this.http.post("https://recobike.herokuapp.com/novatrack", this.track, options)
             .subscribe(function (data) {
+            console.log('ID DO USUARIO', _this.track.userId);
+            console.log('ID DA TRACK', _this.track.$trackId);
+            console.log('ID DO ANDROID', _this.track.androidId);
             console.log(data);
+            _this.clearTrack();
         }, function (error) {
             console.log(error); // Error getting the data
         });
@@ -996,6 +1011,11 @@ var SearchPage = (function () {
         this.auth.getAuthenticatedUser().subscribe(function (auth) {
             !auth ? _this.authenticate = false : _this.authenticate = true;
         });
+        if (!this.userProfile) {
+            this.data.getAuthenticatedUserProfile().subscribe(function (profile) {
+                _this.userProfile = profile;
+            });
+        }
     };
     SearchPage.prototype.navigateToPage = function (pageName) {
         this.navCtrl.push(pageName);
@@ -1004,34 +1024,54 @@ var SearchPage = (function () {
     SearchPage.prototype.capturaCoordenadas = function () {
         var _this = this;
         //captura as coordenadas do usuário e as insere em um objeto track
+        //**PRIMEIRO DE TUDO, ANDROIDID DEVE SER COISA DO PROFILE E DEVE SER CRIADO NO REGISTER
         if (this.capturar == false) {
             this.capturar = true;
+            this.toast.create({
+                message: "Capturando Rota...",
+                duration: 3000
+            }).present();
             this.subscription = this.observador.subscribe(function (position) {
                 console.log('captura ativada');
+                //**COLOCAR UM IF PARA QUE SE A COORDENADA FOR MUITO PROXIMA NAO GRAVAR
                 _this.coordenada.latitude = position.coords.latitude;
                 _this.coordenada.longitude = position.coords.longitude;
                 _this.latlong.push(_this.coordenada);
                 console.log(_this.track);
             });
+            //**popar uma tela que esta gravando trajeto cujo unico botão cancela a gravação
         }
         else if (this.capturar == true) {
             this.capturar = false;
+            this.toast.create({
+                message: "Rota Capturada",
+                duration: 3000
+            }).present();
             this.subscription.unsubscribe();
             console.log('captura desativada');
-            //Popar uma tela de avaliação de trajeto
-            //this.track.trackRating = X
-            //Jsonify e depois mandar o objeto trajeto para o sistema de recomendacao
+            //**Popar uma tela de avaliação de trajeto
+            this.track.trackRating = 5;
+            this.track.userId = this.userProfile.$key;
+            var c = Math.random() * 100000;
+            var d = Math.round(c);
+            this.track.$trackId = d;
+            this.track.androidId = this.userProfile.androidId;
+            //Jsonify e depois manda o objeto trajeto para o sistema de recomendacao
             this.postRequestTrack();
         }
+    };
+    SearchPage.prototype.clearTrack = function () {
+        this.latlong.length = 0;
+        this.track.coordenadas = this.latlong;
     };
     return SearchPage;
 }());
 SearchPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/'<!--\n  Generated template for the SearchPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>\n\n  <!--<ion-navbar>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n\n</ion-header>-->\n\n\n<ion-content>\n\n<app-profile-search (selectedTrack)="openProfile($event)"></app-profile-search>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom right *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="navigateToPage(\'TrackPage\')">\n    <ion-icon name="bicycle"></ion-icon>\n  </button>\n</ion-fab>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom left *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="capturaCoordenadas()">\n    <ion-icon name="compass"></ion-icon>\n  </button>\n</ion-fab>\n\n</ion-content>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/,
+        selector: 'page-search',template:/*ion-inline-start:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/'<!--\n  Generated template for the SearchPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--<ion-header>\n\n  <!--<ion-navbar>\n    <ion-title>Search</ion-title>\n  </ion-navbar>\n\n</ion-header>-->\n\n\n<ion-content>\n\n<app-profile-search (selectedTrack)="openProfile($event)"></app-profile-search>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>-->\n<ion-fab #fab bottom right *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="navigateToPage(\'TrackPage\')">\n    <ion-icon name="bicycle"></ion-icon>\n  </button>\n</ion-fab>\n\n<!--<button ion-button *ngIf="!authenticate" (click)="navigateToPage(\'LoginPage\')">Login</button>\n"capturaCoordenadas()"-->\n<ion-fab #fab bottom left [(ngModel)]="capturar" *ngIf="authenticate">\n  <button button-ion-fab ion-fab (click)="capturaCoordenadas()">\n    <ion-icon name="compass"></ion-icon>\n  </button>\n</ion-fab>\n\n</ion-content>\n'/*ion-inline-end:"/home/lucas/recoTravel/recoBike_interface/src/pages/search/search.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_3__providers_data_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
 ], SearchPage);
 
 //# sourceMappingURL=search.js.map

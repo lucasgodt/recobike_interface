@@ -26,7 +26,7 @@ export class RegisterPage {
         message:"Conta criada: "+ event.result.email,
         duration: 3000
       }).present();
-      //this.navCtrl.setRoot('EditProfilePage'); SignOut
+      //this.navCtrl.setRoot('EditProfilePage');
         this.auth.signOut();
         this.navCtrl.setRoot('LoginPage');
     }else{

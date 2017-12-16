@@ -46,7 +46,6 @@ export class ProfileViewComponent implements OnInit {
       this.userProfile = profile;
       this.existingProfile.emit(this.userProfile);
       this.authenticatedUser.emit(this.authUser);
-
     })
 
     }

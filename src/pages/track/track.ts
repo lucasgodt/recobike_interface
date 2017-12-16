@@ -60,8 +60,8 @@ export class TrackPage implements OnInit {
     let mapOptions: GoogleMapOptions = {
   camera: {
     target: {
-      lat: 43.0741904,
-      lng: -89.3809802
+      lat: -23.5690622,
+      lng: -46.7289294
     },
     zoom: 18,
     tilt: 30

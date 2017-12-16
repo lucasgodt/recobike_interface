@@ -18,6 +18,7 @@ export interface Profile {
   $key?: string;
   services: Service[];     //Filtragem de conteúdo
   online: boolean;         //Filtragem de conteúdo
+  androidId: number;
   responseTime: TimeRanges;   //Filtragem de conteúdo
   tracks: Track[];
 }

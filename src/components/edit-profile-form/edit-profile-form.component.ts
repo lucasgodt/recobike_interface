@@ -23,8 +23,6 @@ export class EditProfileFormComponent implements OnInit, OnDestroy {
   @Output() saveProfileResult: EventEmitter<Boolean>;
 
   @Input() profile: Profile;
-  track1: Track;
-  track2: Track;
 
   constructor(private auth: AuthService, private data: DataService) {
     this.saveProfileResult = new EventEmitter<Boolean>();
@@ -35,6 +33,7 @@ export class EditProfileFormComponent implements OnInit, OnDestroy {
 
   async saveProfile(){
     if(this.authenticatedUser){
+    //Este codigo que utilizo para salvar o profile
     const result = await this.data.saveProfile(this.authenticatedUser, this.profile);
     this.saveProfileResult.emit(result);
     }
@@ -45,22 +44,19 @@ export class EditProfileFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void{
+    let a = Math.random()*100000;
+    let b = Math.round(a);
     if(!this.profile){
       this.profile = {} as Profile;
+      this.profile.androidId = b;
+    }else if(!this.profile.androidId){
+      this.profile.androidId = b;
     }
     //hardcoded tracks para teste
     if(!this.profile.tracks){
-    this.track1 = {} as Track;
-    this.track2 = {} as Track;
-    this.track1.trackId = 1;
-    this.track2.trackId = 2;
-    this.profile.tracks = {} as Track[];
-    this.profile.tracks[0] = this.track1;
-    this.profile.tracks[1] = this.track2;
-
     //this.profile.tracks[1].trackId = 1;
     //this.profile.tracks[1].trackDate = new Date(2017, 9, 21);
-  }
+    }
 }
 
   ngOnDestroy(): void{
